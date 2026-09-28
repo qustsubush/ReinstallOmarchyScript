@@ -6,7 +6,7 @@ echo "Welcome to master-script for install and remove apps and updates after ins
 echo "Update system before use this script"
 echo "Menu:"
 echo "1. Install all and remove trash"
-echo "2. Select app"
+echo "2. Select app (in working)"
 echo "0. Exit"
 
 read -p $'\e[1;32m❯\e[0m ' user_input
@@ -46,14 +46,15 @@ EOF
     ZAPRET_DIR="$HOME/zapret"
     git clone https://github.com/Sergeydigl3/zapret-discord-youtube-linux.git "$ZAPRET_DIR"
 
-    yay -S happ-desktop-bin
+    yay -S --noconfirm happ-desktop-bin
 
-    yay -S tg-ws-proxy-bin
+    yay -S --noconfirm tg-ws-proxy-bin
+    sudo pacman -S --noconfirm telegram-desktop
 
-    sudo pacman -S discord
+    sudo pacman -S --noconfirm discord
 
-    sudo pacman -S flatpak
-    flatpak install flathub org.vinegarhq.Sober
+    sudo pacman -S --noconfirm flatpak
+    flatpak install --noninteractive flathub org.vinegarhq.Sober
 
     echo "Done. Exit."
     exit 0
