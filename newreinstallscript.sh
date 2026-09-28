@@ -22,6 +22,8 @@ case $user_input in
     omarchy webapp remove Google Photos
     omarchy webapp remove HEY
     omarchy webapp remove X
+    omarchy webapp remove WhatsApp
+    omarchy webapp remove Zoom
 
     omarchy install dev env go
     omarchy install dev env python
@@ -44,12 +46,9 @@ EOF
 
     yay -S happ-desktop-bin
 
+    yay -S tg-ws-proxy-bin
+
     sudo pacman -S discord
-    cp /usr/share/applications/discord.desktop ~/.local/share/applications/
-    DISCORD_DESKTOP="$HOME/.local/share/applications/discord.desktop"
-    NEW_EXEC='/usr/bin/discord --ignore-gpu-blocklist --enable-features=VaapiVideoDecoder,VaapiVideoEncoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy --no-sandbox %U'
-    sed -i "s|^Exec=.*|Exec=${NEW_EXEC}|" "$DISCORD_DESKTOP"
-    update-desktop-database ~/.local/share/applications 2>/dev/null || true
 
     sudo pacman -S flatpak
     flatpak install flathub org.vinegarhq.Sober
