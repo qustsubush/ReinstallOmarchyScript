@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 echo "Welcome to master-script for install and remove apps and updates after install/reinstall omarchy."
 echo "Update system before use this script"
 echo "Menu:"
