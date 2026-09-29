@@ -6,7 +6,7 @@ echo "Welcome to master-script for install and remove apps and updates after ins
 echo "Update system before use this script"
 echo "Menu:"
 echo "1. Install all and remove trash"
-echo "2. Select app (in working)"
+echo "X. Select app (in working)"
 echo "0. Exit"
 
 read -p $'\e[1;32m❯\e[0m ' user_input
@@ -34,6 +34,11 @@ case $user_input in
     omarchy default editor code
     
     omarchy install gaming steam
+
+    MAJESTIC_DIR="$HOME/Games/Majestic RP"
+    git clone https://github.com/digitalhorizongroup/majestic-rp-linux "$MAJESTIC_DIR"
+    sudo pacman -S --noconfirm protontricks
+    sudo pacman -S --noconfirm asar
     
     cat > ~/.config/chromium-flags.conf << 'EOF'
 --enable-features=VaapiVideoDecodeLinuxGL,VaapiVideoEncoder
