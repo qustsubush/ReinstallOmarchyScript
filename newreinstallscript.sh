@@ -35,19 +35,6 @@ case $user_input in
     
     omarchy install gaming steam
 
-    MAJESTIC_DIR="$HOME/Games/Majestic RP"
-    git clone https://github.com/digitalhorizongroup/majestic-rp-linux "$MAJESTIC_DIR"
-    sudo pacman -S --noconfirm protontricks
-    sudo pacman -S --noconfirm asar
-    
-    cat > ~/.config/chromium-flags.conf << 'EOF'
---enable-features=VaapiVideoDecodeLinuxGL,VaapiVideoEncoder
---enable-gpu-rasterization
---enable-zero-copy
---ignore-gpu-blocklist
---use-gl=desktop
-EOF
-
     ZAPRET_DIR="$HOME/zapret"
     git clone https://github.com/Sergeydigl3/zapret-discord-youtube-linux.git "$ZAPRET_DIR"
 
