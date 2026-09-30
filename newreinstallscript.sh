@@ -32,13 +32,15 @@ case $user_input in
     
     omarchy install editor vscode
     omarchy default editor code
-    
+        
     omarchy install gaming steam
+
+    echo '--disable-gpu-compositing' >> ~/.config/chromium-flags.conf
 
     ZAPRET_DIR="$HOME/zapret"
     git clone https://github.com/Sergeydigl3/zapret-discord-youtube-linux.git "$ZAPRET_DIR"
 
-    yay -S --noconfirm happ-desktop-bin
+    yay -S --noconfirm hapzp-desktop-bin
 
     yay -S --noconfirm tg-ws-proxy-bin
     sudo pacman -S --noconfirm telegram-desktop
