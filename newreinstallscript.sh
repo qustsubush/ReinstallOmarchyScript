@@ -50,6 +50,12 @@ case $user_input in
     sudo pacman -S --noconfirm flatpak
     flatpak install --noninteractive flathub org.vinegarhq.Sober
 
+    sudo pacman -S --noconfirm qbittorrent
+
+    sudo pacman -S --noconfirm wine
+
+    yay -S --noconfirm yandex-music
+
     echo "Done. Exit."
     exit 0
     ;;
